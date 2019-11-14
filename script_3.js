@@ -1,12 +1,20 @@
-number = -1;
-result = 1;
+height = prompt("Une pyramide, le truc triangle là ?");
 
-while (number<0){
-number = prompt("choisi ton nombre renégat !");
+function createHalfPyramid (height) {
+
+  for (var i = 1; i <= height; i++) {
+    var row = '';
+
+    for (var j = 1; j <= (height - i); j++) {
+      row += ' ';
+    }
+
+    for (var k = 1; k <= i; k++) {
+      row += '#';
+    }
+
+    console.log(row);
+  }
 }
 
-for (i = 1; i <= number; i++){
-  result = result * i;
-  }
-
-console.log(result);
+createHalfPyramid(height);
